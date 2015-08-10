@@ -1,0 +1,8 @@
+CMakeCache.txt
+CMakeLists.txt.user
+CMakeFiles/*
+Makefile
+cmake_install.cmake
+luatest.layout
+luatest
+luatest.cbp

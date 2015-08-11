@@ -3,13 +3,14 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake/modules)
 
 project(luatest)
 
-add_definitions (-std=c++11 -Wall)
+add_definitions(-std=c++11 -Wall)
 
-find_package(Lua REQUIRED)
-if (NOT Lua_FOUND)
+find_package(Lua 5.1 REQUIRED)
+    
+if (NOT LUA_FOUND)
     message(FATAL_ERROR "Lua library not found")
-endif(NOT Lua_FOUND)
-include_directories(${LUA_INCLUDE_DIRS})
+endif(NOT LUA_FOUND)
+include_directories(${LUA_INCLUDE_DIR})
 
 file(GLOB_RECURSE SOURCES  src/*.cpp)
 file(GLOB_RECURSE HEADERS  src/*.h)
